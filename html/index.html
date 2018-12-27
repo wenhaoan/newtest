@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body background="../img/index/背景图@2x.png">
+
+    <div id="guide">
+
+        <img class="logo" src="../img/index/logo@2x.png">
+        <div id="tab-head">
+            <h2 class="select">首页</h2>
+            <h2>关于我们</h2>
+            <h2>业务体系</h2>
+            <h2>战略投资</h2>
+            <h2>新闻中心</h2>
+        </div>
+        <img class="phoneico" src="../img/index/电话@2x.png">
+        <div class="phonenumber">
+            400-888-8888
+        </div>
+    </div>
+    <div id="tab-content">
+        <div class="show">
+            <ul>
+                <li><a href="">企业简介</a></li>
+                <li><img src="../img/index/小圆点@2x.png"></li>
+                <li><a href="">文化与价值观</a></li>
+                <li><img src="../img/index/小圆点@2x.png"></li>
+                <li><a href="">诚聘英才</a></li>
+                <li><img src="../img/index/小圆点@2x.png"></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+        </div>
+        <div>
+
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        $('#tab-head h2').click(function() {
+            var i = $(this).index(); //下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+            $(this).addClass('select').siblings().removeClass('select');
+            $('#tab-content div').eq(i).show().siblings().hide();
+        });
+    </script>
+</body>
+
+</html>
